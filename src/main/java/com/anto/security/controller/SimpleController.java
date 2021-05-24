@@ -7,7 +7,19 @@ import org.springframework.web.bind.annotation.RestController;
 public class SimpleController {
 
 	@GetMapping("/")
-	public String getData() {
-		return "Hello";
+	public String publicMethod() {
+		return "<h1>Hello from public method</h1>";
 	}
+
+	@GetMapping("/user")
+	public String userMethod() {
+		return "<h1>Hello from user method</h1>";
+	}
+	
+	@GetMapping("/admin")
+	public String adminMethod() {
+		return "<h1>Hello from admin method</h1>";
+	}
+	
+	
 }
